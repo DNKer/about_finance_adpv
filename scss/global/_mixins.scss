@@ -1,0 +1,13 @@
+@mixin vp-1439 {
+  @media (max-width: $vp-tablet) {
+    //@content резервируем место, в которое попадает код при вызове миксина
+    @content; 
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: $vp-mobile) {
+    @content;
+  }
+}
+

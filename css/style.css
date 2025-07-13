@@ -553,8 +553,20 @@ a {
   flex-direction: row;
   background: #F4F6FA;
 }
+@media (max-width: 767px) {
+  .card-news--size-xl {
+    flex-direction: column;
+    background: #FFFFFF;
+  }
+}
 .card-news--size-xl .card-news__content {
   padding: 20px 32px;
+}
+@media (max-width: 767px) {
+  .card-news--size-xl .card-news__content {
+    padding: 0;
+    margin: 15px 0 0 0;
+  }
 }
 .card-news--size-xl .card-news__box-text {
   border-radius: 16px 0 0 16px;
@@ -565,9 +577,21 @@ a {
 }
 .card-news__image {
   width: 100%;
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
+}
+@media (max-width: 767px) {
+  .card-news__image {
+    border-radius: 16px;
+  }
 }
 .card-news__content {
   padding: 20px 0 0;
+}
+@media (max-width: 767px) {
+  .card-news__content {
+    padding: 17px 0 0;
+  }
 }
 .card-news__info {
   display: flex;
@@ -578,6 +602,13 @@ a {
   font-size: 13px;
   font-weight: 500;
   line-height: 16px;
+}
+@media (max-width: 767px) {
+  .card-news__info {
+    font-size: 12px;
+    gap: 15px;
+    margin: 0 0 8px 0;
+  }
 }
 .card-news__views, .card-news__time {
   display: flex;
@@ -593,10 +624,23 @@ a {
   font-weight: 700;
   line-height: 24px;
 }
+@media (max-width: 767px) {
+  .card-news__heading {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 11px 0;
+  }
+}
 .card-news__text {
   margin: 0;
   font-size: 15px;
   line-height: 20px;
+}
+@media (max-width: 767px) {
+  .card-news__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .socials {
@@ -626,11 +670,23 @@ a {
   padding: 0;
   list-style-type: none;
 }
+@media (max-width: 767px) {
+  .articles {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
 .articles__item {
   display: flex;
 }
 .articles__item--size-xl {
   grid-column: 1/-1;
+}
+@media (max-width: 767px) {
+  .articles__item {
+    grid-column: none;
+  }
 }
 
 .sidebar__heading {
@@ -671,13 +727,35 @@ a {
   .sidebar__text {
     font-size: 16px;
     line-height: 20px;
+    margin: 0 0 20px 0;
   }
 }
 .sidebar__button {
   display: none;
 }
+@media (max-width: 767px) {
+  .sidebar__button {
+    display: block;
+    width: 100%;
+    outline: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #EDEEEF;
+    color: #1E222E;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
 .sidebar__categories {
   margin: 0 0 60px 0;
+}
+@media (max-width: 767px) {
+  .sidebar__categories {
+    margin: 0 0 30px 0;
+  }
 }
 .sidebar__socials {
   margin: 0 0 24px 0;

@@ -85,6 +85,10 @@
     font-weight: 500;
     line-height: 16px;
 
+    &__icon {
+      fill: $color-white;
+    }
+
     &[disabled] {
       cursor: default;
       color: $color-manatee;
@@ -99,6 +103,18 @@
       width: 40px;
       padding: 0;
       cursor: pointer;
+    }
+
+    &:hover {
+      background-color: $color-blue-zodiac;
+    }
+
+    &:disabled {
+      background-color: $color-white-smoke;
+
+      &__icon {
+        fill: $color-manatee;
+      }
     }
   }
 

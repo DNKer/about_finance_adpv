@@ -2,15 +2,24 @@
   outline: none;
   display: flex;
   flex-direction: column;
-  border-radius: 16px;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
 
   &--size-xl {
     flex-direction: row;
+    border-radius: 16px;
     background: $color-solitude-2;
+
+    @include vp-1439 {
+      .card-news__image {
+        border-bottom-right-radius: 0;
+      }
+    }
 
     @include vp-767 {
       flex-direction: column;
       background: $color-white-none;
+      border-radius: 0;
     }
 
     .card-news__content {
@@ -21,10 +30,6 @@
         margin: 15px 0 0 0;
       }
     }
-
-    .card-news__box-text {
-      border-radius: 16px 0 0 16px;
-    }
   }
 
   &__box {
@@ -33,13 +38,33 @@
   }
 
   &__image {
+    position: relative;
     width: 100%;
-    border-bottom-left-radius: 16px;
-    border-top-left-radius: 16px;
+
+    border-bottom-left-radius: $br-card-news;
+    border-bottom-right-radius: $br-card-news;
+
+    @include vp-1439 {
+      border-bottom-left-radius: $br-card-news;
+      border-bottom-right-radius: $br-card-news;
+    }
 
     @include vp-767 {
-      border-radius: 16px;
+      border-radius: $br-card-news;
     }
+  }
+
+  &__slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #FFFFFF;
+    visibility: hidden;
+    opacity: 0;
   }
 
   &__content {

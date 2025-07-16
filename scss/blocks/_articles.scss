@@ -15,6 +15,30 @@
   &__item {
     display: flex;
 
+    &:hover,
+    &:focus {
+
+      .card-news__image {
+        opacity: .5;
+      }
+
+      .card-news__heading {
+        color: $color-royal-blue;
+      }
+
+      .card-news__box {
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.5);
+        line-height: 0;
+      }
+
+      .card-news__slogan {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+
     &--size-xl {
       grid-column: 1 / -1;
     }
